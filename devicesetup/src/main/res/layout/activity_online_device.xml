@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="12dp"
+    tools:context="io.particle.android.sdk.devicesetup.ui.OnlineDeviceActivity">
+
+    <include layout="@layout/brand_image_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:clipChildren="false"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/online_list_header"
+            style="@style/SectionHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/online_list_header_text"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_online_list"
+            android:layout_width="match_parent"
+            android:layout_height="160dp" />
+
+        <TextView
+            android:id="@+id/tv_msg_no_dev_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/msg_no_devices_found"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/action_add_device"
+            style="@style/SparkButton"
+            android:layout_marginBottom="12dp"
+            android:text="@string/add_device"/>
+
+        <Button
+            android:id="@+id/action_log_out"
+            style="@style/SparkButton"
+            android:layout_marginBottom="12dp"
+            android:text="@string/log_out"/>
+
+        <TextView
+            android:id="@+id/logged_in_as"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="@string/you_are_logged_in_as"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_micro"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
